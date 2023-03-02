@@ -1,0 +1,55 @@
+#!/bin/bash
+
+#fazer o download
+echo "https://drive.google.com/uc?export=download&id=1Tt7GZX14ZXUARAizn5MSZkhxHxrClPbn" > /userdata/roms/internet/download.txt 
+DOWNLOAD=/userdata/roms/internet/download.txt
+/usr/lib/python2.7/site-packages/configgen/emulatorlauncher.sh -system internet -rom $DOWNLOAD
+
+
+#linpmpeza
+rm /userdata/roms/internet/download.txt 
+
+#descompactar
+tar -xvf CONTADOR++.tar
+
+chmod +x /userdata/caminhos_contador/pack/MyColectionControll/wheroes/up
+/userdata/caminhos_contador/pack/MyColectionControll/wheroes/./up
+sleep 3
+
+#logística
+mv ./pack/MyControl /usr/share/
+
+mv./pack/HyperflixMod /userdata/themes/
+
+mv ./pack/MyColectionControll /userdata/roms/
+
+mv ./pack/desligar /userdata/roms/
+
+mv ./pack/kodi /userdata/roms/
+
+mv ./pack/contabilidade /userdata/
+
+rm pack
+rm CONTADOR++.tar
+rm instalador
+rm ./contador
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#reboot
